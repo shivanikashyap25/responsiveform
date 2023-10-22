@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<title>RESPONSIVE FORM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="cont">
+            <nav>
+                <img src="images/voc-logo.jpeg" class="logo">
+                <header>REGISTRATION FORM</header>
+            </nav>
+
+        </div>
+
+    </div>
+    <section class="container">
+        <form action="#" class="form">
+            <div class="input-box">
+                <label><b>Full Name</b></label>
+                <input type="text" placeholder="Enter full name" required/>
+
+            </div>
+            <div class="input-box">
+                <label><b>Email-ID</b></label>
+                <input type="text" placeholder="Enter Email-ID" required/>
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label><b>Phone-NO</b></label>
+                    <input type="number" placeholder="Enter Phone-NO" required/>
+                </div>
+                <div class="input-box">
+                    <label><b>Date Of Birth</b></label>
+                    <input type="date" placeholder="Enter DOB" required/>
+                </div>
+
+            </div>
+            <div class="gender-box">
+                <h3><b>Gender</b></h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" checked/>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender"/>
+                        <label for="check-female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-other" name="gender"/>
+                        <label for="check-other">Other</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="forrm">
+                <label for="profilePicture"><b>Profile Picture</b></label>
+                <input type="file" id="profilePicture" name="profilePicture">
+            </div>
+
+        <!-- Password -->
+        <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" name="password" required>
+        <div id="password-strength"></div> <!-- New element for password strength indicator -->
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+            <label for="confirmPassword"><b>Confirm Password</b></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <div class="terms-box">
+            <div class="terms-text">
+                <h2>Terms Of Service</h2>
+                <p>Last Edit:20/10/2023</p>
+                <p>Greetings Users,</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fugit facere aliquid incidunt accusantium est? Numquam perferendis soluta necessitatibus quibusdam doloribus accusantium repellendus repudiandae, provident possimus, dicta nostrum quam mollitia at delectus perspiciatis reiciendis eos et eum ab sit corporis quisquam fugit tempora. Explicabo odio doloremque at et culpa a!</p>
+                <p>Laboriosam quia beatae iusto dicta accusantium nulla, dolorum excepturi quod commodi reprehenderit omnis sint iste, consequatur at! Iste cum earum fugiat aspernatur laboriosam dignissimos rerum, nesciunt perferendis eius similique provident quidem quo voluptates veniam. Ipsam, tenetur consequuntur. Porro, ipsa ratione id, magni, fugit culpa ut cum eveniet iure neque ea!</p>
+                <p>Quis temporibus fuga ab recusandae reprehenderit eum laborum necessitatibus facilis deleniti esse, consectetur, nihil rerum nostrum totam corporis. Est tempore ducimus expedita iusto, accusamus architecto quasi, quidem laborum exercitationem voluptas aut, soluta neque cupiditate veniam explicabo? Facilis et commodi, nulla rem eligendi, atque, a repudiandae cumque laboriosam sed nostrum vitae?</p>
+                <p>Amet laborum facere vero, praesentium temporibus repellat, quia, assumenda voluptates hic iusto aliquam quidem iure consectetur? Numquam soluta quisquam, vitae voluptatum quibusdam quidem iure adipisci quos, doloremque incidunt reprehenderit cupiditate minima maxime facere ipsa porro labore consectetur culpa reiciendis sed laudantium recusandae beatae, quasi distinctio. Cum fugit eligendi aperiam dolore.</p>
+                <p>Hic facere nihil quae dignissimos impedit nobis vitae nam odit. Facilis, magni vero omnis odit quisquam aut fuga quas consectetur ut dignissimos soluta amet et veniam nesciunt praesentium sint blanditiis corporis tempora placeat quidem? Quisquam numquam, magnam laudantium, nostrum totam doloribus perferendis sapiente deleniti beatae quod facilis soluta quaerat veniam.</p>
+                <p>Distinctio iste provident explicabo laboriosam eius alias commodi cum? Ullam quasi aliquid culpa dolores excepturi sint! Sint minus animi fuga? Sint, consequuntur optio? Necessitatibus cum assumenda aut adipisci. Eius fugiat dolor voluptatem veniam. Quos ex at dicta facilis modi sequi error recusandae debitis commodi fuga quae voluptatum iusto, voluptatem voluptatibus?</p>
+            </div>
+            <h4>I Agree to the <span>Terms of Serivice </span> and I read the Privacy Notice</h4>
+            <div class="buttons">
+                <button id="agreeButton" class="btn grey-btn accept">Accept and Submit</button>
+                <button class="btn gray-btn">Decline</button>
+
+            </div>
+            <section class="new-registration-form" style="display: none;">
+                <form action="#" class="form">
+                    <!-- Add new registration form fields here -->
+                    <!-- For example: -->
+                    <div class="input-box">
+                        <label><b>New Field</b></label>
+                        <input type="text" placeholder="New Field" required/>
+                    </div>
+                    <button type="submit"><b>Submit New Registration</b></button>
+                </form>
+            </section>
+
+        </div>
+        
+        
+        </form>
+
+    </section>
+    <script>
+    document.getElementById('password').addEventListener('input', function() {
+    var password = this.value;
+    var indicator = document.getElementById('password-strength');
+    
+    if (password.length > 8) {
+        indicator.innerText = 'Strong';
+        indicator.style.color = 'green';
+    } else if (password.length >= 6) {
+        indicator.innerText = 'Medium';
+        indicator.style.color = 'orange';
+    } else {
+        indicator.innerText = 'Weak';
+        indicator.style.color = 'red';
+    }
+});
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('agreeButton').addEventListener('click', function() {
+            // Clear the form
+            document.querySelector('form').reset();
+            alert('THANKYOU YOUR FORM HAS BEEN SUBMITTED');
+    
+            // Hide the current form
+            document.querySelector('.container').style.display = 'none';
+    
+            // Show the new registration form
+            document.querySelector('.new-registration-form').style.display = 'block';
+        });
+    
+    });
+
+</script>
+
+</body>
+
+
+</html>
