@@ -1,3 +1,3 @@
-# responsiveform
-Hey Guys this is my week 3 task of creating a responsive form and the link is given below
+Responsive Form
+I have learned to create a responsive form that helped me understand how to use java script and implement it in daily life.
 https://responsiveformvoc.netlify.app/
